@@ -1,5 +1,3 @@
-
-print ("ok")
 import spidev
 import time
 from RPi import GPIO
@@ -7,8 +5,6 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 from gpiozero import LED,Button
 from matplotlib import pyplot as plt
-#sw1 = Button(26,pull_up=True)#  37
-#from gpiozero import LED,Button
 from scipy.ndimage import gaussian_filter1d
 from scipy import signal
 import gpiod
@@ -64,28 +60,21 @@ def read_byte(register):
  print ("data", read_reg)
  
 def send_command(command):
-# GPIO.output(18, False)
  send_data = [command]
  com_reg=spi.xfer(send_data)
-# GPIO.output(18, True)
-# time.sleep(1)
  
 def write_byte(register,data):
-# GPIO.output(18, False)
  write=0x40
  register_write=write|register
  data = [register_write,0x00,data]
  print (data)
  spi.xfer(data)
-# GPIO.output(18, True)
-# time.sleep(1)
 
 send_command (wakeup)
 send_command (stop)
 send_command (reset)
 send_command (sdatac)
 
-#write_byte (0x14, 0x80) #GPIO
 write_byte (config1, 0x96)
 write_byte (config2, 0xD4)
 write_byte (config3, 0xFF)
@@ -120,7 +109,6 @@ data_5ch_test = []
 data_6ch_test = []
 data_7ch_test = []
 data_8ch_test = []
-
 
 figure, axis = plt.subplots(8, 1)
 plt.subplots_adjust(hspace=1) 
