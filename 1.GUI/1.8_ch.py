@@ -120,9 +120,6 @@ data_7ch_test = []
 data_8ch_test = []
 
 
-figure, axis = plt.subplots(8, 1)
-plt.subplots_adjust(hspace=1) 
-
 axis_x=0
 y_minus_graph=250
 y_plus_graph=250
@@ -130,11 +127,15 @@ x_minux_graph=5000
 x_plus_graph=250
 sample_len = 250
 
-axi = [0,1,2,3,4,5,6,7]
-for ax in axi:
-    axis[ax].set_xlabel('Time')
-    axis[ax].set_ylabel('Amplitude')
-    axis[ax].set_title('Data after pass filter')
+fig, axis = plt.subplots(4, 2, figsize=(5, 5))
+plt.subplots_adjust(hspace=1)
+
+axi = [(i, j) for i in range(4) for j in range(2)]
+for ax_row, ax_col in axi:
+    axis[ax_row, ax_col].set_xlabel('Time')
+    axis[ax_row, ax_col].set_ylabel('Amplitude')
+    axis[ax_row, ax_col].set_title('Data after pass filter')
+ 
 test_DRDY = 5 
 
 #1.2 Band-pass filter
@@ -213,8 +214,8 @@ while 1:
             data_filt_numpy_high_1 = butter_highpass_filter(data_for_graph_1, highcut, fps)
             data_for_graph_1 = butter_lowpass_filter(data_filt_numpy_high_1, lowcut, fps)
 
-            axis[0].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_1[250:], color = '#0a0b0c')  
-            axis[0].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_1[50]-y_minus_graph, data_for_graph_1[150]+y_plus_graph])
+            axis[0,0].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_1[250:], color = '#0a0b0c')  
+            axis[0,0].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_1[50]-y_minus_graph, data_for_graph_1[150]+y_plus_graph])
 
             # 2
             data_after_2 = data_2ch_test        
@@ -225,8 +226,8 @@ while 1:
             data_filt_numpy_high_2 = butter_highpass_filter(data_for_graph_2, highcut, fps)
             data_for_graph_2 = butter_lowpass_filter(data_filt_numpy_high_2, lowcut, fps)
 
-            axis[1].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_2[250:], color = '#0a0b0c')  
-            axis[1].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_2[50]-y_minus_graph, data_for_graph_2[150]+y_plus_graph])
+            axis[1,0].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_2[250:], color = '#0a0b0c')  
+            axis[1,0].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_2[50]-y_minus_graph, data_for_graph_2[150]+y_plus_graph])
 
             # 3
             data_after_3 = data_3ch_test        
@@ -237,8 +238,8 @@ while 1:
             data_filt_numpy_high_3 = butter_highpass_filter(data_for_graph_3, highcut, fps)
             data_for_graph_3 = butter_lowpass_filter(data_filt_numpy_high_3, lowcut, fps)
 
-            axis[2].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_3[250:], color = '#0a0b0c')  
-            axis[2].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_3[50]-y_minus_graph, data_for_graph_3[150]+y_plus_graph])
+            axis[2,0].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_3[250:], color = '#0a0b0c')  
+            axis[2,0].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_3[50]-y_minus_graph, data_for_graph_3[150]+y_plus_graph])
 
             # 4
             data_after_4 = data_4ch_test        
@@ -249,8 +250,8 @@ while 1:
             data_filt_numpy_high_4 = butter_highpass_filter(data_for_graph_4, highcut, fps)
             data_for_graph_4 = butter_lowpass_filter(data_filt_numpy_high_4, lowcut, fps)
 
-            axis[3].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_4[250:], color = '#0a0b0c')  
-            axis[3].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_4[50]-y_minus_graph, data_for_graph_4[150]+y_plus_graph])
+            axis[3,0].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_4[250:], color = '#0a0b0c')  
+            axis[3,0].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_4[50]-y_minus_graph, data_for_graph_4[150]+y_plus_graph])
 
             #5
             data_after_5 = data_5ch_test        
@@ -261,10 +262,9 @@ while 1:
             data_filt_numpy_high_5 = butter_highpass_filter(data_for_graph_5, highcut, fps)
             data_for_graph_5 = butter_lowpass_filter(data_filt_numpy_high_5, lowcut, fps)
 
-            axis[4].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_5[250:], color = '#0a0b0c')  
-            axis[4].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_5[50]-y_minus_graph, data_for_graph_5[150]+y_plus_graph])
-
-
+            axis[0,1].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_5[250:], color = '#0a0b0c')  
+            axis[0,1].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_5[50]-y_minus_graph, data_for_graph_5[150]+y_plus_graph])
+             
             #6
             data_after_6 = data_6ch_test        
             dataset_6 =  data_before_6 + data_after_6
@@ -274,8 +274,8 @@ while 1:
             data_filt_numpy_high_6 = butter_highpass_filter(data_for_graph_6, highcut, fps)
             data_for_graph_6 = butter_lowpass_filter(data_filt_numpy_high_6, lowcut, fps)
 
-            axis[5].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_6[250:], color = '#0a0b0c')  
-            axis[5].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_6[50]-y_minus_graph, data_for_graph_6[150]+y_plus_graph])
+            axis[1,1].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_6[250:], color = '#0a0b0c')  
+            axis[1,1].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_6[50]-y_minus_graph, data_for_graph_6[150]+y_plus_graph])
 
             #7
             data_after_7 = data_7ch_test        
@@ -286,8 +286,8 @@ while 1:
             data_filt_numpy_high_7 = butter_highpass_filter(data_for_graph_7, highcut, fps)
             data_for_graph_7 = butter_lowpass_filter(data_filt_numpy_high_7, lowcut, fps)
 
-            axis[6].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_7[250:], color = '#0a0b0c')  
-            axis[6].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_7[50]-y_minus_graph, data_for_graph_1[150]+y_plus_graph])
+            axis[2,1].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_7[250:], color = '#0a0b0c')  
+            axis[2,1].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_7[50]-y_minus_graph, data_for_graph_1[150]+y_plus_graph])
 
             #8
             data_after_8 = data_8ch_test        
@@ -298,9 +298,8 @@ while 1:
             data_filt_numpy_high_8 = butter_highpass_filter(data_for_graph_8, highcut, fps)
             data_for_graph_8 = butter_lowpass_filter(data_filt_numpy_high_8, lowcut, fps)
 
-            axis[7].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_8[250:], color = '#0a0b0c')  
-            axis[7].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_8[50]-y_minus_graph, data_for_graph_8[150]+y_plus_graph])
-
+            axis[3,1].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_8[250:], color = '#0a0b0c')  
+            axis[3,1].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_8[50]-y_minus_graph, data_for_graph_8[150]+y_plus_graph])
 
             plt.pause(0.000001)
             
@@ -314,4 +313,9 @@ while 1:
             data_7ch_test = []
             data_8ch_test = []
 spi.close()
+
+
+
+
+
 
