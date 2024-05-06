@@ -6,15 +6,20 @@ save_data_short.py - for saving raw data without visualization
 
 #### Libraries 
 import spidev  
-  pip install spidev
+  - pip install spidev
 
 from RPi import GPIO
-  pip install RPi.GPIO
+  - pip install RPi.GPIO
 
 from matplotlib import pyplot as plt   
-  pip install matplotlib
+  - pip install matplotlib
 
 from scipy
-  pip install scipy  
+  - pip install scipy  
 import gpiod
-  pip install gpiod  
+  - pip install gpiod  
+
+Available libraries as example 
+  matplotlib                         3.6.3
+  spidev                             3.5  
+ &nbsp  RPi.GPIO                           0.7.1a4  
