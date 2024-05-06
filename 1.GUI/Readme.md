@@ -20,6 +20,7 @@ import gpiod
   - pip install gpiod  
 
 Available libraries as example 
-  matplotlib                         3.6.3
-  spidev                             3.5  
- &nbsp  RPi.GPIO                           0.7.1a4  
+  - matplotlib                         3.6.3
+  - spidev                             3.5  
+  - RPi.GPIO                           0.7.1a4
+  - scipy                              1.10.1
