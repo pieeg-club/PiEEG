@@ -19,7 +19,7 @@ from scipy
 
 import gpiod  
   - pip install gpiod
-  - 
+
 ### Available libraries as example 
   - matplotlib                         3.6.3
   - spidev                             3.5  
