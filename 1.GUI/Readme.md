@@ -15,8 +15,8 @@ from matplotlib import pyplot as plt
   - pip install matplotlib
 
 from scipy
-  - pip install scipy  
-import gpiod
+  - pip install scipy
+import gpiod  
   - pip install gpiod  
 
 ### Available libraries as example 
