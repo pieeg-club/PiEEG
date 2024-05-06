@@ -1,10 +1,10 @@
-#### Scripts   
+### Scripts   
 1.8_ch.py - for graph visualisation   
 Raw_data_1Ch.py - one ch with raw data visualization    
 save_data_short.py - for saving raw data without visualization    
 
 
-#### Libraries 
+### Libraries 
 import spidev  
   - pip install spidev
 
@@ -19,7 +19,7 @@ from scipy
 import gpiod
   - pip install gpiod  
 
-Available libraries as example 
+### Available libraries as example 
   - matplotlib                         3.6.3
   - spidev                             3.5  
   - RPi.GPIO                           0.7.1a4
