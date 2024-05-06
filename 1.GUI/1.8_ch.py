@@ -5,27 +5,22 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 from gpiozero import LED,Button
 from matplotlib import pyplot as plt
-#sw1 = Button(26,pull_up=True)#  37
-#from gpiozero import LED,Button
 from scipy.ndimage import gaussian_filter1d
 from scipy import signal
 import gpiod
+from time import sleep
+
 button_pin = 26
 chip = gpiod.Chip("gpiochip4")
 
 button_line = chip.get_line(button_pin)
 button_line.request(consumer = "Button", type = gpiod.LINE_REQ_DIR_IN)
 
-from time import sleep
+
 spi = spidev.SpiDev()
 spi.open(0,0)
 spi.max_speed_hz=600000
-
-#spi.max_speed_hz=25000
 spi.lsbfirst=False
-#spi.cshigh=False
-#spi.cslow=True
-
 spi.mode=0b01
 spi.bits_per_word = 8
 
@@ -62,28 +57,22 @@ def read_byte(register):
  print ("data", read_reg)
  
 def send_command(command):
-# GPIO.output(18, False)
  send_data = [command]
  com_reg=spi.xfer(send_data)
-# GPIO.output(18, True)
-# time.sleep(1)
  
 def write_byte(register,data):
-# GPIO.output(18, False)
  write=0x40
  register_write=write|register
  data = [register_write,0x00,data]
  print (data)
  spi.xfer(data)
-# GPIO.output(18, True)
-# time.sleep(1)
 
 send_command (wakeup)
 send_command (stop)
 send_command (reset)
 send_command (sdatac)
 
-#write_byte (0x14, 0x80) #GPIO
+write_byte (0x14, 0x80) #GPIO
 write_byte (config1, 0x96)
 write_byte (config2, 0xD4)
 write_byte (config3, 0xFF)
@@ -129,13 +118,15 @@ sample_len = 250
 
 fig, axis = plt.subplots(4, 2, figsize=(5, 5))
 plt.subplots_adjust(hspace=1)
-
+ch_name = 0
+ch_name_title = [1,5,2,6,3,7,4,8]
 axi = [(i, j) for i in range(4) for j in range(2)]
 for ax_row, ax_col in axi:
     axis[ax_row, ax_col].set_xlabel('Time')
     axis[ax_row, ax_col].set_ylabel('Amplitude')
-    axis[ax_row, ax_col].set_title('Data after pass filter')
- 
+    axis[ax_row, ax_col].set_title('Data after pass filter Ch-' + str(ch_name_title[ch_name]))
+    ch_name = ch_name + 1    
+    
 test_DRDY = 5 
 
 #1.2 Band-pass filter
@@ -173,11 +164,8 @@ def butter_highpass_filter(data, cutoff, fs, order=5):
     return y
 
 while 1:
-    # print("before")
     button_state = button_line.get_value()
-    # print("after")
     if button_state == 1:
-       # print ("button_state 1")
         test_DRDY = 10
     if test_DRDY == 10 and button_state == 0:
         test_DRDY = 0 
@@ -265,6 +253,7 @@ while 1:
             axis[0,1].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_5[250:], color = '#0a0b0c')  
             axis[0,1].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_5[50]-y_minus_graph, data_for_graph_5[150]+y_plus_graph])
              
+
             #6
             data_after_6 = data_6ch_test        
             dataset_6 =  data_before_6 + data_after_6
@@ -301,6 +290,7 @@ while 1:
             axis[3,1].plot(range(axis_x,axis_x+sample_lens,1),data_for_graph_8[250:], color = '#0a0b0c')  
             axis[3,1].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data_for_graph_8[50]-y_minus_graph, data_for_graph_8[150]+y_plus_graph])
 
+
             plt.pause(0.000001)
             
             axis_x=axis_x+sample_lens 
@@ -313,9 +303,4 @@ while 1:
             data_7ch_test = []
             data_8ch_test = []
 spi.close()
-
-
-
-
-
 
