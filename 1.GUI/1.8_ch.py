@@ -3,7 +3,7 @@ import time
 from RPi import GPIO
 GPIO.setwarnings(False) 
 GPIO.setmode(GPIO.BOARD)
-from gpiozero import LED,Button
+#from gpiozero import LED,Button
 from matplotlib import pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 from scipy import signal
