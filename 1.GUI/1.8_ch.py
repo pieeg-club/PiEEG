@@ -8,6 +8,7 @@ from scipy import signal
 import gpiod
 from time import sleep
 
+# GPIO setup GPIO inputs 
 GPIO.setwarnings(False) 
 GPIO.setmode(GPIO.BOARD)
 
@@ -17,7 +18,7 @@ chip = gpiod.Chip("gpiochip4")
 button_line = chip.get_line(button_pin)
 button_line.request(consumer = "Button", type = gpiod.LINE_REQ_DIR_IN)
 
-
+#  setup SPI protocol
 spi = spidev.SpiDev()
 spi.open(0,0)
 spi.max_speed_hz=600000
@@ -25,6 +26,7 @@ spi.lsbfirst=False
 spi.mode=0b01
 spi.bits_per_word = 8
 
+# REgisters for ADS1299 
 who_i_am=0x00
 config1=0x01
 config2=0X02
@@ -68,11 +70,13 @@ def write_byte(register,data):
  print (data)
  spi.xfer(data)
 
+# command to ADS1299
 send_command (wakeup)
 send_command (stop)
 send_command (reset)
 send_command (sdatac)
 
+# write registers to ADS1299
 write_byte (0x14, 0x80) #GPIO
 write_byte (config1, 0x96)
 write_byte (config2, 0xD4)
@@ -84,7 +88,6 @@ write_byte (0x0F, 0x00)
 write_byte (0x10, 0x00)
 write_byte (0x11, 0x00)
 write_byte (0x15, 0x20)
-#
 write_byte (0x17, 0x00)
 write_byte (ch1set, 0x00)
 write_byte (ch2set, 0x00)
@@ -93,12 +96,12 @@ write_byte (ch4set, 0x00)
 write_byte (ch5set, 0x00)
 write_byte (ch6set, 0x00)
 write_byte (ch7set, 0x00)
-write_byte (ch8set, 0x00)
-
+write_byte (ch8set, 0x00
 send_command (rdatac)
 send_command (start)
 DRDY=1
 
+# set up  8 ch for read data 
 result=[0]*27
 data_1ch_test = []
 data_2ch_test = []
@@ -109,7 +112,7 @@ data_6ch_test = []
 data_7ch_test = []
 data_8ch_test = []
 
-
+# Set up Graph
 axis_x=0
 y_minus_graph=250
 y_plus_graph=250
