@@ -1,7 +1,10 @@
 ### Scripts   
-1.8_ch.py - for graph visualisation   
-Raw_data_1Ch.py - one ch with raw data visualization    
-save_data_short.py - for saving raw data without visualization    
+1.8_ch_Pi5.py - for graph visualization with Pi5
+1.8_ch_Pi4.py - for graph visualization with Pi4
+
+Raw_data_1Ch.py - one ch with raw data visualization for Pi5    
+save_data_short_Pi5.py - for saving raw data without visualization with Pi5
+save_data_short_Pi4.py - for saving raw data without visualization with Pi4
 
 
 ### Libraries 
