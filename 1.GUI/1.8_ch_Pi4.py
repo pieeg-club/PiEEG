@@ -1,42 +1,22 @@
 import spidev
 import time
 from RPi import GPIO
-#from gpiozero import LED,Button
 from matplotlib import pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 from scipy import signal
-#import gpiod
 from time import sleep
 
-# GPIO setup GPIO inputs 
-#GPIO.setwarnings(False) 
-#GPIO.setmode(GPIO.BOARD)
-
-#button_pin = 26
-#chip = gpiod.Chip("gpiochip4")
-
-#button_line = chip.get_line(button_pin)
-#button_line.request(consumer = "Button", type = gpiod.LINE_REQ_DIR_IN)
-
-#  setup SPI protocol
-
-
+#GPIO
 GPIO.setwarnings(False) 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(37, GPIO.IN)
-
+#  setup SPI protocol
 spi = spidev.SpiDev()
 spi.open(0,0)
 spi.max_speed_hz=600000
-
-                       
 spi.lsbfirst=False
-                 
-               
-
 spi.mode=0b01
 spi.bits_per_word = 8
-
 
 # REgisters for ADS1299 
 who_i_am=0x00
@@ -74,22 +54,15 @@ def read_byte(register):
 
  
 def send_command(command):
-                        
  send_data = [command]
  com_reg=spi.xfer(send_data)
-                       
-               
- 
-def write_byte(register,data):
-                        
+def write_byte(register,data):                        
  write=0x40
  register_write=write|register
  data = [register_write,0x00,data]
  print (data)
  spi.xfer(data)
-                       
-               
-
+                                     
 # command to ADS1299
 send_command (wakeup)
 send_command (stop)
@@ -190,13 +163,7 @@ def butter_highpass_filter(data, cutoff, fs, order=5):
     return y
 
 while 1:
-    GPIO.wait_for_edge(37, GPIO.FALLING)
-    #button_state = button_line.get_value()
-    #if button_state == 1:
-    #    test_DRDY = 10
-    #if test_DRDY == 10 and button_state == 0:
-    #    test_DRDY = 0 
-
+        GPIO.wait_for_edge(37, GPIO.FALLING)
         output=spi.readbytes(27)
         for a in range (3,25,3):
             voltage_1=(output[a]<<8)| output[a+1]
