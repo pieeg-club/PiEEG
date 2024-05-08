@@ -96,7 +96,7 @@ write_byte (ch4set, 0x00)
 write_byte (ch5set, 0x00)
 write_byte (ch6set, 0x00)
 write_byte (ch7set, 0x00)
-write_byte (ch8set, 0x00
+write_byte (ch8set, 0x00)
 send_command (rdatac)
 send_command (start)
 DRDY=1
