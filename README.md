@@ -12,5 +12,5 @@ Contact: pieeg@pieeg.com
 
 >[!CAUTION]
 > The device must operate only from a battery - 5 V. Complete isolation from the mains power is required.! The device MUST not be connected to any kind of mains power, via USB or otherwise.   
-> Power supply - only battery 5V, please read the [liability]([https://pieeg.com/liability/])
+> Power supply - only battery 5V, please read the [liability](https://pieeg.com/liability/)
 
