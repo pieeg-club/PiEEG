@@ -14,13 +14,3 @@ Contact: pieeg@pieeg.com
 > The device must operate only from a battery - 5 V. Complete isolation from the mains power is required.! The device MUST not be connected to any kind of mains power, via USB or otherwise.   
 > Power supply - only battery 5V, please read the [liability](https://pieeg.com/liability/)
 
-git clone https://github.com/brainflow-dev/brainflow 
-git checkout pieeg
-
-python3 tools/build.py --build-periphery 
-должно собраться без ошибок
-
-cd python-package
-python3 -m pip install -U .
-
-python3 examples/tests/brainflow_get_data.py --board-id 56
