@@ -13,9 +13,13 @@ from time import sleep
 
 # GPIO config in RPi
 button_pin = 26
-chip = gpiod.Chip("gpiochip4")
-button_line = chip.get_line(button_pin)
-button_line.request(consumer = "Button", type = gpiod.LINE_REQ_DIR_IN)
+chip = gpiod.chip("/dev/gpiochip0")
+line = chip.get_line(button_pin)
+button_line = gpiod.line_request()
+button_line.consumer = "Button"
+button_line.request_type = gpiod.line_request.DIRECTION_INPUT
+line.request(button_line)
+
 
 # SPI connections beetwen ADS1299 and RPi
 spi = spidev.SpiDev()
@@ -113,10 +117,10 @@ data_7ch_test = []
 data_8ch_test = []
 
  
-test_DRDY = 5 
+test_DRDY = 5
 
 while 1:
-    button_state = button_line.get_value()
+    button_state = line.get_value()
     # test if ads1299 ready to send data
     if button_state == 1:
         test_DRDY = 10
