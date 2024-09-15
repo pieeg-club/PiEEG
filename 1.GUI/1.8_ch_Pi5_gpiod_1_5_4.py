@@ -6,7 +6,7 @@ import gpiod
 
 
 button_pin = 26
-chip = gpiod.chip("/dev/gpiochip4")
+chip = gpiod.chip("/dev/gpiochip0")
 line = chip.get_line(button_pin)
 button_line = gpiod.line_request()
 button_line.consumer = "Button"
