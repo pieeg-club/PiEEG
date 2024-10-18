@@ -16,3 +16,12 @@ Contact: pieeg@pieeg.com
 > The device must operate only from a battery - 5 V. Complete isolation from the mains power is required.! The device MUST not be connected to any kind of mains power, via USB or otherwise.   
 > Power supply - only battery 5V, please read the [liability](https://pieeg.com/liability/)
 
+
+I. Rakhmatuiln, M. Zhanikeev, and A. Parfenov, "Raspberry Pi Shield - for measure EEG (PIEEG)," 2021 5th International Conference on Electrical, Electronics, Communication, Computer Technologies and Optimization Techniques (ICEECCOT), 2021, pp. 410-413, DOI: 10.1109/ICEECCOT52851.2021.9707969  [link](https://ieeexplore.ieee.org/document/9707969)
+
+
+Rakhmatulin, I., Volkl, S. (2020). PIEEG: Turn a Raspberry Pi into a Brain-Computer Interface to measure biosignals. arXiv:2201.02228, https://arxiv.org/abs/2201.02228  
+
+#### Contacts  
+http://pieeg.com/
+
