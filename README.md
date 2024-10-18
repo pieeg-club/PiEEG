@@ -16,6 +16,11 @@ Shield connected with Raspberry Pi only at the next points:
   35  CLK  
   36  CS  
 
+Connect the shield to Raspberry Pi which is supplied via a 5V battery (power supply) and connect electrodes.
+Full galvanic isolation from mains is required.  
+This also applies to the monitor. Use only a monitor that is powered by the Raspberry Pi, as in the picture below, left. Electrodes are positioned according to the International 10-20 system, right    
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.7.bmp "general view")
+
 #### Warnings
 >[!WARNING]
 > PiEEG  is not medical device. You are fully responsible for your personal decision to purchase this device and, ultimately, for its safe use. PiEEG is not a medical device and has not been certified by any government regulatory agency for use with the human body. Use it at your own risk.  
