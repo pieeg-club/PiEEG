@@ -7,6 +7,14 @@ Please be free add your GUI in this repository
 https://pieeg.com/  
 Contact: pieeg@pieeg.com  
 
+#### Device Pinout  
+Shield connected with Raspberry Pi only at the next points:     
+  43  +5V  
+  44  GND  
+  37  MOSI  
+  34  MISO  
+  35  CLK  
+  36  CS  
 
 #### Warnings
 >[!WARNING]
