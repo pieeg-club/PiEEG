@@ -16,6 +16,11 @@ Shield connected with Raspberry Pi only at the next points:
   35  CLK  
   36  CS  
 
+
+right    
+![alt tag](https://github.com/pieeg-club/PiEEG/blob/main/images/pins2.bmp "spi")
+
+
 Connect the shield to Raspberry Pi which is supplied via a 5V battery (power supply) and connect electrodes.
 Full galvanic isolation from mains is required.  
 This also applies to the monitor. Use only a monitor that is powered by the Raspberry Pi, as in the picture below, left. Electrodes are positioned according to the International 10-20 system, right    
