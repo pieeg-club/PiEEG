@@ -7,7 +7,9 @@
 1.8_ch_Pi4.py - for graph visualization with Pi4  
 
 Raw_data_1Ch.py - one ch with raw data visualization for Pi5      
-save_data_short_Pi5.py - for saving raw data without visualization with Pi5  
+save_data_short_Pi5.py - for saving raw data without visualization with Pi5  (pip install gpiod==1.6.3)  
+save_data_gpiod_1_5_4.py - for saving raw data without visualization with Pi5  (pip install gpiod==1.5.4)  
+
 save_data_short_Pi4.py - for saving raw data without visualization with Pi4  
 
 
