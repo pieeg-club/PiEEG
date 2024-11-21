@@ -7,6 +7,24 @@ Please be free add your GUI in this repository
 https://pieeg.com/  
 Contact: pieeg@pieeg.com  
 
+
+## Signal test
+#### Alpha in EEG signal
+<img src="https://github.com/pieeg-club/PiEEG/blob/main/images/alpha%20(1).bmp" alt="alt tag" title="aloha" width="1200">
+
+#### Artefacts (chewing and blinking) in EEG signal
+
+<img src="https://github.com/pieeg-club/PiEEG/blob/main/images/artefacts.bmp" alt="alt tag" title="artefacts" width="1200">
+
+
+#### EMG signal
+![alt tag](https://github.com/pieeg-club/PiEEG/blob/main/images/EMG.jpeg "emg")
+
+#### EKG signal 
+<img src="https://github.com/pieeg-club/PiEEG/blob/main/images/heart1.bmp" alt="alt tag" title="artefacts" width="1200">
+
+
+
 #### Pinout between Pi and PiEEG  
  
 ![alt tag](https://github.com/pieeg-club/PiEEG/blob/main/images/pins2.bmp "spi")
