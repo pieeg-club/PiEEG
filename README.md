@@ -7,7 +7,7 @@ Please be free add your GUI in this repository
 https://pieeg.com/  
 Contact: pieeg@pieeg.com  
 
-<img src="https://github.com/pieeg-club/PiEEG/blob/main/images/1729020252009.jfif" alt="alt tag" title="aloha" width="1200">
+<img src="https://github.com/pieeg-club/PiEEG/blob/main/images/1729020252009.jfif" alt="alt tag" title="aloha">
 
 
 ## Signal test
