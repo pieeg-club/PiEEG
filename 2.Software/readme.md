@@ -1,5 +1,5 @@
 ## Easy start 
-Just download PiEEG.zip, move to bundle, and launch PiEEG_app  
+Just download PiEEG.zip, move to bundle folder, and launch PiEEG_app    
 
 ## Data details 
 We save Raw data to allow researchers work with data without any limitations. 
