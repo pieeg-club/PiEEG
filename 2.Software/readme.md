@@ -2,7 +2,7 @@
 Just download PiEEG.zip, move to the bundle folder, and launch PiEEG_app    
 
 ## Data details 
-We save Raw data to allow researchers to work with data without any limitations. 
+We save Raw data to allow researchers to work with data without any limitations.   
 Protocol has the next structure (250 SPS, every telegram has the next view, so this line we receive 2250 times per second).      
 <img src="https://github.com/pieeg-club/PiEEG/blob/main/images/protocol.bmp " alt="alt tag" title="aloha">
 
