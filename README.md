@@ -52,5 +52,5 @@ I. Rakhmatuiln, et all. (2021). Raspberry Pi Shield - for measure EEG (PIEEG). 2
 Rakhmatulin, I., Volkl, S. (2020). PIEEG: Turn a Raspberry Pi into a Brain-Computer Interface to measure biosignals. arXiv:2201.02228, https://arxiv.org/abs/2201.02228  
 
 #### Contacts  
-http://pieeg.com/
-pieeg@pieeg.com  
+http://pieeg.com/  
+pieeg@pieeg.com    
