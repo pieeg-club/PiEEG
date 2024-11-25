@@ -27,7 +27,7 @@ from scipy
   - pip install scipy  
 
 import gpiod  
-  - pip install gpiod==1.6.3
+  - pip install gpiod==1.5.4  
 
 ### Available libraries as example 
   - matplotlib                         3.6.3
