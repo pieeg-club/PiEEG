@@ -18,7 +18,7 @@ import spidev
   - pip install spidev
 
 from RPi import GPIO
-  - pip install RPi.GPIO
+  - pip install RPi.GPIO (only fo Pi4)
 
 from matplotlib import pyplot as plt   
   - pip install matplotlib
