@@ -1,4 +1,4 @@
-### SDK  Scripts   
+### SDK  Scripts for Python 3.11.2  
 1.8_ch_Pi5.py for gpiod 1.6.3 version (pip install gpiod==1.6.3)  
 1.8_ch_Pi5_gpiod_1_5_4.py for gpiod 1.5.4 version (pip install gpiod==1.5.4)
 
