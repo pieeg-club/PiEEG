@@ -12,6 +12,10 @@ Contact: pieeg@pieeg.com
 <img src="https://github.com/pieeg-club/PiEEG/blob/main/images/1729020252009.jfif" alt="alt tag" title="aloha">
 
 
+<img src="https://github.com/pieeg-club/PiEEG/blob/main/images/Connection.bmp  " alt="alt tag" title="aloha">
+
+
+
 ## Signal test
 #### Alpha in EEG signal
 <img src="https://github.com/pieeg-club/PiEEG/blob/main/images/alpha%20(1).bmp" alt="alt tag" title="aloha" width="1200">
