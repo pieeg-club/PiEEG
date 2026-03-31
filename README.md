@@ -7,6 +7,7 @@ PiEEG SDK [video maual](https://youtu.be/9jLyN2zRXdU)
 
 <img src="https://github.com/pieeg-club/PiEEG/blob/main/images/1729020252009.jfif" alt="alt tag" title="aloha">
 
+Connection   
 
 <img src="https://github.com/pieeg-club/PiEEG/blob/main/images/Connection.bmp  " alt="alt tag" title="aloha">
 
