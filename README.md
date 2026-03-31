@@ -3,10 +3,7 @@ Software [PiEEG Server](https://github.com/pieeg-club/PiEEG-server)
 [Manual](https://colab.research.google.com/drive/1xW6fwzVdLH83zHoorjeWai6SdZoOanfA#scrollTo=9bxgisvWfs5f)    
 [Manual for quick start ](https://github.com/pieeg-club/PiEEG/blob/main/Manual.%20Conenction%20and%20start%20-%20PiEEG1.pdf)    
 PiEEG SDK [video maual](https://youtu.be/9jLyN2zRXdU)     
-Practical Python Signal Processing [course in Udemy](https://www.udemy.com/course/signal-processing-python-for-eeg/?referralCode=2D537B5EAD7114C43DE2) comfortable for PiEEG 
 
-https://pieeg.com/  
-Contact: pieeg@pieeg.com  
 
 <img src="https://github.com/pieeg-club/PiEEG/blob/main/images/1729020252009.jfif" alt="alt tag" title="aloha">
 
