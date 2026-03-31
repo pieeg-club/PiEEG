@@ -1,5 +1,5 @@
-# GUI
-PiEEG it is a low-cost brain-computer interface that allows measuring EEG via RaspberryPI  
+### PiEEG it is a low-cost brain-computer interface that allows measuring EEG via RaspberryPI  
+Software [PiEEG Server](https://github.com/pieeg-club/PiEEG-server)   
 [Manual](https://colab.research.google.com/drive/1xW6fwzVdLH83zHoorjeWai6SdZoOanfA#scrollTo=9bxgisvWfs5f)    
 [Manual for quick start ](https://github.com/pieeg-club/PiEEG/blob/main/Manual.%20Conenction%20and%20start%20-%20PiEEG1.pdf)    
 PiEEG SDK [video maual](https://youtu.be/9jLyN2zRXdU)     
