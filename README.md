@@ -11,7 +11,7 @@ Connection
 
 <img src="https://github.com/pieeg-club/PiEEG/blob/main/images/Connection.bmp  " alt="alt tag" title="aloha">
 
-PiEEG included to [PiEEG-Server software](https://github.com/pieeg-club/PiEEG-server)  
+PiEEG included to [PiEEG-Server software](https://github.com/pieeg-club/PiEEG-server)  PiEEG-Server Software [Doc](https://pieeg-server-doc.vercel.app/) 
 <img src="https://github.com/pieeg-club/ironbci/blob/master/Supplementary%20files/imahe_2.png" alt="general view" title="general view" width="90%" height="90%">
 
 
